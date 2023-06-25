@@ -32,22 +32,31 @@ class _AuthPageState extends State<AuthPage> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 75,
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 15),
-                  child: Text(
-                    "Почта",
-                    style: Theme.of(context).textTheme.bodySmall,
+            Padding(
+              padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height / 7,
+              ),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15),
+                    child: Text(
+                      "Почта",
+                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                          ),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-            const CustomField(
+            CustomField(
               hintText: "test1234@gmail.com",
+              hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                  ),
             ),
             const SizedBox(
               height: 30,
@@ -58,12 +67,20 @@ class _AuthPageState extends State<AuthPage> {
                   padding: const EdgeInsets.only(left: 15),
                   child: Text(
                     "Номер телефона",
-                    style: Theme.of(context).textTheme.bodySmall,
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                        ),
                   ),
                 ),
               ],
             ),
-            const CustomField(),
+            CustomField(
+              hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                  ),
+            ),
             const SizedBox(
               height: 30,
             ),
@@ -73,13 +90,20 @@ class _AuthPageState extends State<AuthPage> {
                   padding: const EdgeInsets.only(left: 15),
                   child: Text(
                     "Придумайте пароль",
-                    style: Theme.of(context).textTheme.bodySmall,
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                        ),
                   ),
                 ),
               ],
             ),
-            const CustomField(
+            CustomField(
               hintText: "***********",
+              hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                  ),
             ),
             const SizedBox(
               height: 30,
@@ -90,37 +114,51 @@ class _AuthPageState extends State<AuthPage> {
                   padding: const EdgeInsets.only(left: 15),
                   child: Text(
                     "Повторите пароль",
-                    style: Theme.of(context).textTheme.bodySmall,
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                        ),
                   ),
                 ),
               ],
             ),
-            const CustomField(
+            CustomField(
               hintText: "***********",
-            ),
-            const SizedBox(
-              height: 80,
-            ),
-            CustomBtn(
-              height: 52,
-              borderRadius: BorderRadius.circular(60),
-              onTap: () {
-                Navigator.pushReplacement(
-                  context,
-                  CupertinoPageRoute(
-                    builder: (context) {
-                      return const LoginPage();
-                    },
+              hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
                   ),
-                );
-              },
-              margin: const EdgeInsets.symmetric(
-                horizontal: 15,
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height / 9,
               ),
-              text: "Зарегистрироваться",
+              child: CustomBtn(
+                height: 52,
+                borderRadius: BorderRadius.circular(60),
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) {
+                        return const LoginPage();
+                      },
+                    ),
+                  );
+                },
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 15,
+                ),
+                text: "Зарегистрироваться",
+                textStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      fontSize: 14,
+                      color: Theme.of(context).scaffoldBackgroundColor,
+                      fontWeight: FontWeight.w600,
+                    ),
+              ),
             ),
             const SizedBox(
-              height: 10,
+              height: 15,
             ),
             Text(
               "Есть аккаунт ?",
@@ -143,14 +181,18 @@ class _AuthPageState extends State<AuthPage> {
                   ),
                 );
               },
-              child: const Text(
+              child: Text(
                 "Пройти регистрацию",
-                style: TextStyle(
-                  decoration: TextDecoration.underline,
-                  fontSize: 14,
-                ),
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      decoration: TextDecoration.underline,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
               ),
-            )
+            ),
+            const SizedBox(
+              height: 24,
+            ),
           ],
         ),
       ),

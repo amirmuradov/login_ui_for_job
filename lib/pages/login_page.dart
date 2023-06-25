@@ -132,13 +132,16 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 );
               },
-              child: const Text(
+              child: Text(
                 "Пройти регистрацию",
-                style: TextStyle(
-                  decoration: TextDecoration.underline,
-                  fontSize: 14,
-                ),
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      decoration: TextDecoration.underline,
+                      fontSize: 14,
+                    ),
               ),
+            ),
+            const SizedBox(
+              height: 24,
             ),
           ],
         ),
