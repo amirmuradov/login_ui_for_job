@@ -32,8 +32,8 @@ class _LoginPageState extends State<LoginPage> {
                     ),
               ),
             ),
-            const SizedBox(
-              height: 60,
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(
