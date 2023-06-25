@@ -56,6 +56,7 @@ class _LoginPageState extends State<LoginPage> {
                     "Номер телефона",
                     style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           fontSize: 14,
+                          fontWeight: FontWeight.w600,
                         ),
                   ),
                 ),
@@ -66,9 +67,10 @@ class _LoginPageState extends State<LoginPage> {
                 top: 10,
               ),
               child: CustomField(
-                hintStyle: TextStyle(
-                  color: Theme.of(context).hintColor,
-                ),
+                hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
               ),
             ),
             Row(
@@ -82,6 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                     "Пароль",
                     style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           fontSize: 14,
+                          fontWeight: FontWeight.w600,
                         ),
                   ),
                 ),
@@ -94,9 +97,10 @@ class _LoginPageState extends State<LoginPage> {
               child: CustomField(
                 hintText: "******",
                 suffixText: "Забыли ?",
-                hintStyle: TextStyle(
-                  color: Theme.of(context).hintColor,
-                ),
+                hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
               ),
             ),
             const SizedBox(
@@ -114,6 +118,11 @@ class _LoginPageState extends State<LoginPage> {
                 );
               },
               text: "Войти",
+              textStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    fontSize: 14,
+                    color: Theme.of(context).scaffoldBackgroundColor,
+                    fontWeight: FontWeight.w600,
+                  ),
               height: 52,
               margin: const EdgeInsets.symmetric(horizontal: 15),
               borderRadius: BorderRadius.circular(60),
@@ -137,6 +146,7 @@ class _LoginPageState extends State<LoginPage> {
                 style: Theme.of(context).textTheme.bodySmall!.copyWith(
                       decoration: TextDecoration.underline,
                       fontSize: 14,
+                      fontWeight: FontWeight.w600,
                     ),
               ),
             ),

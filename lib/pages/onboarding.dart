@@ -52,10 +52,11 @@ class _OnboardingState extends State<Onboarding> {
                 children: <TextSpan>[
                   TextSpan(
                     text: "сертификат о прохождении курса",
-                    style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      color: Theme.of(context).primaryColor,
-                    ),
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                          decoration: TextDecoration.underline,
+                          color: Theme.of(context).primaryColor,
+                          fontWeight: FontWeight.w600,
+                        ),
                   ),
                 ],
               ),
