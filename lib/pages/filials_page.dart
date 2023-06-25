@@ -2,16 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:login_ui_for_job/pages/main_page.dart';
+import 'package:login_ui_for_job/widgets/credit_cart.dart';
 import 'package:login_ui_for_job/widgets/custom_button.dart';
 
 class FilialsPage extends StatefulWidget {
-  const FilialsPage({super.key});
+  const FilialsPage({Key? key}) : super(key: key);
 
   @override
   State<FilialsPage> createState() => _FilialsPageState();
 }
 
 class _FilialsPageState extends State<FilialsPage> {
+  bool? isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +49,7 @@ class _FilialsPageState extends State<FilialsPage> {
                       ),
                       child: Center(
                         child: Text(
-                          "Филлиалы ",
+                          "Филлиалы",
                           style:
                               Theme.of(context).textTheme.bodyMedium!.copyWith(
                                     fontWeight: FontWeight.w600,
@@ -64,59 +66,96 @@ class _FilialsPageState extends State<FilialsPage> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: Container(
-                  padding: const EdgeInsets.only(
-                    top: 15,
-                    left: 15,
-                    right: 170,
-                  ),
-                  width: double.infinity,
-                  height: 125,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(22),
-                    color: Theme.of(context).primaryColor,
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
+                child: Stack(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.only(
+                        top: 15,
+                        left: 15,
+                        right: 170,
+                      ),
+                      width: double.infinity,
+                      height: 125,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(22),
+                        color: Theme.of(context).primaryColor,
+                      ),
+                      child: Column(
                         children: [
-                          Expanded(
-                            child: Text(
-                              "Вы можете отправить заявки во все МКК",
-                              textAlign: TextAlign.left,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodySmall!
-                                  .copyWith(
-                                    color: Theme.of(context)
-                                        .scaffoldBackgroundColor,
-                                    fontSize: 16,
-                                  ),
-                            ),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  "Вы можете отправить заявки во все МКК",
+                                  textAlign: TextAlign.left,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodySmall!
+                                      .copyWith(
+                                        color: Theme.of(context)
+                                            .scaffoldBackgroundColor,
+                                        fontSize: 16,
+                                      ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          CustomBtn(
+                            onTap: () {},
+                            padding: const EdgeInsets.all(0),
+                            text: "Отправить",
+                            textStyle:
+                                Theme.of(context).textTheme.bodySmall!.copyWith(
+                                      fontSize: 14,
+                                      color: Theme.of(context).primaryColor,
+                                    ),
+                            textColor: Theme.of(context).primaryColor,
+                            accentColor:
+                                Theme.of(context).scaffoldBackgroundColor,
+                            height: 35,
+                            width: 120,
                           ),
                         ],
                       ),
-                      const SizedBox(
-                        height: 20,
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      right: 15,
+                      child: SvgPicture.asset(
+                        'assets/test.svg',
                       ),
-                      CustomBtn(
-                        onTap: () {},
-                        padding: const EdgeInsets.all(0),
-                        text: "Отправить",
-                        textStyle:
-                            Theme.of(context).textTheme.bodySmall!.copyWith(
-                                  fontSize: 14,
-                                  color: Theme.of(context).primaryColor,
-                                ),
-                        textColor: Theme.of(context).primaryColor,
-                        accentColor: Theme.of(context).scaffoldBackgroundColor,
-                        height: 35,
-                        width: 120,
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 5),
+                    child: Checkbox(
+                      value: isChecked,
+                      onChanged: (newBool) {
+                        setState(() {
+                          isChecked = newBool;
+                        });
+                      },
+                      tristate: true,
+                      activeColor: Theme.of(context).primaryColor,
+                    ),
+                  ),
+                  Text(
+                    "С высоким рейтингом",
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
+                  ),
+                ],
+              ),
+              CreditCart()
             ],
           ),
         ),
