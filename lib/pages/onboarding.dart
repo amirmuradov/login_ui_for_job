@@ -24,6 +24,7 @@ class _OnboardingState extends State<Onboarding> {
                   color: Theme.of(context).hintColor,
                   fontWeight: FontWeight.w600,
                   fontSize: 20,
+                  fontFamily: "Gilroy-Bold",
                 ),
             textAlign: TextAlign.center,
           ),
@@ -38,7 +39,7 @@ class _OnboardingState extends State<Onboarding> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: 50,
+              horizontal: 45,
             ),
             child: RichText(
               textAlign: TextAlign.center,
@@ -47,15 +48,18 @@ class _OnboardingState extends State<Onboarding> {
                     "Пройдите все модули, успешно выполните тесты и получите ",
                 style: Theme.of(context).textTheme.bodySmall!.copyWith(
                       fontSize: 14,
+                      fontFamily: "OpenSans",
                       fontWeight: FontWeight.w600,
                     ),
                 children: <TextSpan>[
                   TextSpan(
                     text: "сертификат о прохождении курса",
                     style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                          decoration: TextDecoration.underline,
                           color: Theme.of(context).primaryColor,
+                          fontSize: 14,
+                          fontFamily: "OpenSans",
                           fontWeight: FontWeight.w600,
+                          decoration: TextDecoration.underline,
                         ),
                   ),
                 ],
@@ -66,12 +70,13 @@ class _OnboardingState extends State<Onboarding> {
             height: 25,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 50),
+            padding: const EdgeInsets.symmetric(horizontal: 35),
             child: Text(
               "Morbi congue massa cum nec quis dignissim non. Lacus turpis ullamcorper porta enim lorem. Hendrerit odio lorem accumsan et leo id quam. Nulla sed interdum elementum ante facilisi porttitor non. Sit quis cras volutpat aliquam diam porta. In viverra pretium blandit fringilla tincidunt orci fermentum",
               style: Theme.of(context).textTheme.bodySmall!.copyWith(
                     color: Colors.grey.shade600.withOpacity(0.9),
                     fontSize: 14,
+                    fontFamily: "OpenSans",
                   ),
               textAlign: TextAlign.center,
             ),
@@ -91,6 +96,11 @@ class _OnboardingState extends State<Onboarding> {
               );
             },
             text: "Далее",
+            textStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
+                  fontFamily: "Gilroy",
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  fontSize: 14,
+                ),
             margin: const EdgeInsets.symmetric(horizontal: 15),
             borderRadius: BorderRadius.circular(60),
             height: 52,

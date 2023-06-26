@@ -59,6 +59,7 @@ class _CoursePageState extends State<CoursePage> {
                                 .copyWith(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 20,
+                                  fontFamily: "Gilroy-Regular",
                                 ),
                           ),
                         ),
@@ -102,6 +103,7 @@ class _CoursePageState extends State<CoursePage> {
                                   .copyWith(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w600,
+                                    fontFamily: "Gilroy-Regular",
                                   ),
                             ),
                           ],
@@ -119,6 +121,7 @@ class _CoursePageState extends State<CoursePage> {
                                   .bodySmall!
                                   .copyWith(
                                     fontSize: 14,
+                                    fontFamily: "Gilroy-Regular",
                                     color: Colors.grey.shade600.withOpacity(1),
                                   ),
                             ),
@@ -130,6 +133,7 @@ class _CoursePageState extends State<CoursePage> {
                                   .copyWith(
                                     color: Colors.grey.shade600.withOpacity(1),
                                     fontSize: 14,
+                                    fontFamily: "Gilroy-Regular",
                                   ),
                             ),
                             Text(
@@ -140,6 +144,7 @@ class _CoursePageState extends State<CoursePage> {
                                   .copyWith(
                                     color: Colors.grey.shade600.withOpacity(1),
                                     fontSize: 14,
+                                    fontFamily: "Gilroy-Regular",
                                   ),
                             ),
                           ],
@@ -157,12 +162,19 @@ class _CoursePageState extends State<CoursePage> {
                             ),
                             Text(
                               "30%",
-                              style: Theme.of(context).textTheme.bodySmall,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodySmall!
+                                  .copyWith(
+                                    fontSize: 12,
+                                    fontFamily: "Gilroy-Regular",
+                                    fontWeight: FontWeight.w600,
+                                  ),
                             )
                           ],
                         ),
                         const SizedBox(
-                          height: 5,
+                          height: 15,
                         ),
                         Expanded(
                           child: CustomBtn(
@@ -176,6 +188,8 @@ class _CoursePageState extends State<CoursePage> {
                                 Theme.of(context).textTheme.bodySmall!.copyWith(
                                       color: Theme.of(context).primaryColor,
                                       fontWeight: FontWeight.w600,
+                                      fontSize: 14,
+                                      fontFamily: "Gilroy-Regular",
                                     ),
                           ),
                         )
@@ -195,6 +209,7 @@ class _CoursePageState extends State<CoursePage> {
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                               fontSize: 20,
                               fontWeight: FontWeight.w600,
+                              fontFamily: "Gilroy-Regular",
                             ),
                       ),
                     ),
@@ -211,9 +226,17 @@ class _CoursePageState extends State<CoursePage> {
                     "Сессия 4",
                   ],
                   decorationboxtext: "Сессия",
+                  decorationboxstyle:
+                      Theme.of(context).textTheme.bodySmall!.copyWith(
+                            fontFamily: "Gilroy-Regular",
+                          ),
                   checkbox: SvgPicture.asset('assets/checkbox.svg'),
                   text: "Модуль №1",
                   decorationboxdescription: "14мин",
+                  decorationboxtextstyle:
+                      Theme.of(context).textTheme.bodySmall!.copyWith(
+                            fontFamily: "Gilroy-Regular",
+                          ),
                   descriptioncheckbox: SvgPicture.asset(
                     'assets/checkbox.svg',
                   ),
@@ -222,6 +245,7 @@ class _CoursePageState extends State<CoursePage> {
                         color: Theme.of(context).hintColor,
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
+                        fontFamily: "Gilroy-Regular",
                       ),
                   padding: const EdgeInsets.only(
                     top: 10,

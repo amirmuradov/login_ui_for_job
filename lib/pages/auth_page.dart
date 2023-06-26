@@ -28,6 +28,7 @@ class _AuthPageState extends State<AuthPage> {
                         color: Theme.of(context).primaryColor,
                         fontWeight: FontWeight.bold,
                         fontSize: 44,
+                        fontFamily: "Gilroy-Bold",
                       ),
                 ),
               ),
@@ -45,6 +46,7 @@ class _AuthPageState extends State<AuthPage> {
                       style: Theme.of(context).textTheme.bodySmall!.copyWith(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
+                            fontFamily: "Gilroy-Regular",
                           ),
                     ),
                   ),
@@ -56,10 +58,11 @@ class _AuthPageState extends State<AuthPage> {
               hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
+                    fontFamily: "Gilroy-Regular",
                   ),
             ),
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             Row(
               children: [
@@ -70,6 +73,7 @@ class _AuthPageState extends State<AuthPage> {
                     style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           fontSize: 14,
                           fontWeight: FontWeight.w600,
+                          fontFamily: "Gilroy-Regular",
                         ),
                   ),
                 ),
@@ -82,7 +86,7 @@ class _AuthPageState extends State<AuthPage> {
                   ),
             ),
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             Row(
               children: [
@@ -93,6 +97,7 @@ class _AuthPageState extends State<AuthPage> {
                     style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           fontSize: 14,
                           fontWeight: FontWeight.w600,
+                          fontFamily: "Gilroy-Regular",
                         ),
                   ),
                 ),
@@ -103,10 +108,11 @@ class _AuthPageState extends State<AuthPage> {
               hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
+                    fontFamily: "Gilroy-Regular",
                   ),
             ),
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             Row(
               children: [
@@ -117,6 +123,7 @@ class _AuthPageState extends State<AuthPage> {
                     style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           fontSize: 14,
                           fontWeight: FontWeight.w600,
+                          fontFamily: "Gilroy-Regular",
                         ),
                   ),
                 ),
@@ -131,7 +138,7 @@ class _AuthPageState extends State<AuthPage> {
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height / 9,
+                top: MediaQuery.of(context).size.height / 13,
               ),
               child: CustomBtn(
                 height: 52,
@@ -152,8 +159,9 @@ class _AuthPageState extends State<AuthPage> {
                 text: "Зарегистрироваться",
                 textStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
                       fontSize: 14,
-                      color: Theme.of(context).scaffoldBackgroundColor,
                       fontWeight: FontWeight.w600,
+                      color: Theme.of(context).scaffoldBackgroundColor,
+                      fontFamily: "Gilroy-Regular",
                     ),
               ),
             ),
@@ -162,10 +170,12 @@ class _AuthPageState extends State<AuthPage> {
             ),
             Text(
               "Есть аккаунт ?",
-              style: TextStyle(
-                color: Colors.grey.shade500,
-                fontSize: 14,
-              ),
+              style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.grey.shade500,
+                    fontFamily: "Gilroy-Regular",
+                  ),
             ),
             const SizedBox(
               height: 10,
@@ -184,9 +194,10 @@ class _AuthPageState extends State<AuthPage> {
               child: Text(
                 "Пройти регистрацию",
                 style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                      decoration: TextDecoration.underline,
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
+                      fontFamily: "Gilroy-Regular",
+                      decoration: TextDecoration.underline,
                     ),
               ),
             ),

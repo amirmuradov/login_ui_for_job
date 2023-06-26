@@ -12,6 +12,7 @@ class CourseCart extends StatefulWidget {
     this.height = 240,
     this.svgpicture,
     required this.text,
+    this.showprogressindicator = true,
     required this.description,
     this.descriptionstyle,
     this.avatarColor,
@@ -35,6 +36,7 @@ class CourseCart extends StatefulWidget {
   final Color? avatarColor;
   final Widget? nexticon;
   final void Function() onTap;
+  final bool showprogressindicator;
 
   @override
   State<CourseCart> createState() => _CourseCartState();
@@ -75,8 +77,11 @@ class _CourseCartState extends State<CourseCart> {
               children: [
                 Text(
                   widget.text,
-                  style:
-                      widget.textStyle ?? Theme.of(context).textTheme.bodySmall,
+                  style: widget.textStyle ??
+                      Theme.of(context).textTheme.bodySmall!.copyWith(
+                            fontFamily: "Gilroy-Regular",
+                            fontWeight: FontWeight.w600,
+                          ),
                 ),
               ],
             ),
@@ -90,6 +95,7 @@ class _CourseCartState extends State<CourseCart> {
                       style: widget.descriptionstyle ??
                           Theme.of(context).textTheme.bodySmall!.copyWith(
                                 fontSize: 13,
+                                fontFamily: "Gilroy-Regular",
                                 color: Colors.grey.shade600.withOpacity(1),
                               ),
                     ),
@@ -97,25 +103,30 @@ class _CourseCartState extends State<CourseCart> {
                 ),
               ],
             ),
-            Row(
-              children: [
-                Expanded(
-                  child: LinearPercentIndicator(
-                    progressColor: Theme.of(context).primaryColor,
-                    percent: 0.3,
-                    lineHeight: 7,
-                    barRadius: const Radius.circular(20),
-                  ),
-                ),
-                Text(
-                  "30%",
-                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                        color: Colors.grey.shade600.withOpacity(0.7),
-                        fontSize: 12,
-                      ),
-                ),
-              ],
+            const SizedBox(
+              height: 20,
             ),
+            if (widget.showprogressindicator)
+              Row(
+                children: [
+                  Expanded(
+                    child: LinearPercentIndicator(
+                      progressColor: Theme.of(context).primaryColor,
+                      percent: 0.3,
+                      lineHeight: 7,
+                      barRadius: const Radius.circular(20),
+                    ),
+                  ),
+                  Text(
+                    "30%",
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                          color: Colors.grey.shade600.withOpacity(0.7),
+                          fontSize: 12,
+                          fontFamily: "Gilroy-Bold",
+                        ),
+                  ),
+                ],
+              ),
           ],
         ),
       ),

@@ -10,6 +10,7 @@ class CustomField extends StatefulWidget {
     this.suffixText,
     this.margin,
     this.textStyle,
+    this.bordercolor,
     this.contentPadding = const EdgeInsets.symmetric(vertical: 8),
   }) : super(key: key);
 
@@ -21,6 +22,7 @@ class CustomField extends StatefulWidget {
   final String? suffixText;
   final TextStyle? textStyle;
   final EdgeInsets? contentPadding;
+  final Color? bordercolor;
 
   @override
   State<CustomField> createState() => _CustomFieldState();
@@ -41,6 +43,12 @@ class _CustomFieldState extends State<CustomField> {
                       color: Theme.of(context).hintColor,
                     ),
             suffixText: widget.suffixText,
+            enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(
+                color: Theme.of(context).dividerColor,
+                width: 1.5,
+              ),
+            ),
             contentPadding: const EdgeInsets.symmetric(horizontal: 15),
           ),
           controller: widget.controller,

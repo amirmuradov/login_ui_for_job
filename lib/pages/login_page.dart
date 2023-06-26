@@ -29,6 +29,7 @@ class _LoginPageState extends State<LoginPage> {
                       color: Theme.of(context).primaryColor,
                       fontSize: 44,
                       fontWeight: FontWeight.bold,
+                      fontFamily: "Gilroy-Bold",
                     ),
               ),
             ),
@@ -57,6 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           fontSize: 14,
                           fontWeight: FontWeight.w600,
+                          fontFamily: "Gilroy-Regular",
                         ),
                   ),
                 ),
@@ -70,6 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                 hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
+                      fontFamily: "Gilroy-Regular",
                     ),
               ),
             ),
@@ -85,6 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           fontSize: 14,
                           fontWeight: FontWeight.w600,
+                          fontFamily: "Gilroy-Regular",
                         ),
                   ),
                 ),
@@ -96,10 +100,10 @@ class _LoginPageState extends State<LoginPage> {
               ),
               child: CustomField(
                 hintText: "******",
-                suffixText: "Забыли ?",
                 hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
+                      fontFamily: "Gilroy-Regular",
                     ),
               ),
             ),
@@ -122,6 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                     fontSize: 14,
                     color: Theme.of(context).scaffoldBackgroundColor,
                     fontWeight: FontWeight.w600,
+                    fontFamily: "Gilroy-Regular",
                   ),
               height: 52,
               margin: const EdgeInsets.symmetric(horizontal: 15),
@@ -144,9 +149,10 @@ class _LoginPageState extends State<LoginPage> {
               child: Text(
                 "Пройти регистрацию",
                 style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                      decoration: TextDecoration.underline,
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
+                      fontFamily: "Gilroy-Regular",
+                      decoration: TextDecoration.underline,
                     ),
               ),
             ),

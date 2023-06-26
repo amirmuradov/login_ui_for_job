@@ -44,11 +44,14 @@ class _CartState extends State<Cart> {
         child: Row(
           children: [
             Expanded(
-              child: Text(widget.text,
-                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w500,
-                      )),
+              child: Text(
+                widget.text,
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      fontFamily: "Gilroy",
+                    ),
+              ),
             ),
             SvgPicture.asset(
               'assets/light.svg',

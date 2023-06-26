@@ -57,6 +57,7 @@ class _FilialsPageState extends State<FilialsPage> {
                                 .copyWith(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 20,
+                                  fontFamily: "Gilroy-Regular",
                                 ),
                           ),
                         ),
@@ -72,10 +73,10 @@ class _FilialsPageState extends State<FilialsPage> {
                   child: Stack(
                     children: [
                       Container(
-                        padding: const EdgeInsets.only(
+                        padding: EdgeInsets.only(
                           top: 15,
                           left: 15,
-                          right: 170,
+                          right: MediaQuery.of(context).size.width * 0.49,
                         ),
                         width: double.infinity,
                         height: 125,
@@ -97,14 +98,15 @@ class _FilialsPageState extends State<FilialsPage> {
                                         .copyWith(
                                           color: Theme.of(context)
                                               .scaffoldBackgroundColor,
-                                          fontSize: 16,
+                                          fontSize: 12,
+                                          fontFamily: "OpenSans",
                                         ),
                                   ),
                                 ),
                               ],
                             ),
                             const SizedBox(
-                              height: 20,
+                              height: 15,
                             ),
                             Padding(
                               padding: const EdgeInsets.only(right: 25),
@@ -118,12 +120,13 @@ class _FilialsPageState extends State<FilialsPage> {
                                     .copyWith(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w600,
+                                      fontFamily: "Gilroy-Regular",
                                       color: Theme.of(context).primaryColor,
                                     ),
                                 textColor: Theme.of(context).primaryColor,
                                 accentColor:
                                     Theme.of(context).scaffoldBackgroundColor,
-                                height: 35,
+                                height: 40,
                                 width: 100,
                               ),
                             ),
@@ -162,6 +165,7 @@ class _FilialsPageState extends State<FilialsPage> {
                       "С высоким рейтингом",
                       style: Theme.of(context).textTheme.bodySmall!.copyWith(
                             fontSize: 14,
+                            fontFamily: "Gilroy-Regular",
                             fontWeight: FontWeight.w500,
                           ),
                     ),
@@ -169,7 +173,7 @@ class _FilialsPageState extends State<FilialsPage> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 25, right: 15),
                         child: Container(
-                          padding: const EdgeInsets.only(left: 25),
+                          padding: const EdgeInsets.only(left: 30),
                           width: 120,
                           height: 45,
                           decoration: BoxDecoration(
@@ -191,6 +195,7 @@ class _FilialsPageState extends State<FilialsPage> {
                                       color: Theme.of(context)
                                           .scaffoldBackgroundColor,
                                       fontSize: 14,
+                                      fontFamily: "Gilroy-Regular",
                                       fontWeight: FontWeight.w600,
                                     ),
                               ),

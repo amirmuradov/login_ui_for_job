@@ -35,6 +35,7 @@ class _MainPageState extends State<MainPage> {
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                             fontWeight: FontWeight.w600,
                             fontSize: 20,
+                            fontFamily: "Gilroy",
                           ),
                     ),
                     const Icon(
@@ -96,11 +97,6 @@ class _MainPageState extends State<MainPage> {
                           },
                           svgpicture: SvgPicture.asset('assets/card1.svg'),
                           text: "Пройти курс",
-                          textStyle:
-                              Theme.of(context).textTheme.bodySmall!.copyWith(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                  ),
                           description:
                               'Morbi congue massa cquis dignissim acus',
                           nexticon: SvgPicture.asset(
@@ -123,11 +119,7 @@ class _MainPageState extends State<MainPage> {
                           svgpicture: SvgPicture.asset('assets/card2.svg'),
                           color: Theme.of(context).cardColor.withOpacity(0.3),
                           text: "Сертификация",
-                          textStyle:
-                              Theme.of(context).textTheme.bodySmall!.copyWith(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                  ),
+                          showprogressindicator: false,
                           description:
                               'Morbi congue massa cquis dignissim acus ignissim acus',
                           descriptionstyle: Theme.of(context)
@@ -159,12 +151,8 @@ class _MainPageState extends State<MainPage> {
                               .withOpacity(0.3),
                           svgpicture: SvgPicture.asset('assets/card3.svg'),
                           avatarColor: Theme.of(context).secondaryHeaderColor,
+                          showprogressindicator: false,
                           text: "Ежедневник",
-                          textStyle:
-                              Theme.of(context).textTheme.bodySmall!.copyWith(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                  ),
                           description:
                               'Morbi congue massa cquis dignissim acus ignissim acus',
                           descriptionstyle: Theme.of(context)
@@ -192,12 +180,8 @@ class _MainPageState extends State<MainPage> {
                           avatarColor: Theme.of(context).canvasColor,
                           svgpicture: SvgPicture.asset('assets/card4.svg'),
                           color: Theme.of(context).canvasColor.withOpacity(0.3),
+                          showprogressindicator: false,
                           text: "Филиалы",
-                          textStyle:
-                              Theme.of(context).textTheme.bodySmall!.copyWith(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                  ),
                           description:
                               'Morbi congue massa cquis dignissim acus',
                           descriptionstyle: Theme.of(context)
