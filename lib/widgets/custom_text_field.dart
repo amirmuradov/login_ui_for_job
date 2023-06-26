@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
 class CustomField extends StatefulWidget {
-  const CustomField(
-      {super.key,
-      this.controller,
-      this.padding = const EdgeInsets.symmetric(horizontal: 15),
-      this.hintStyle,
-      this.hintText,
-      this.suffixText,
-      this.margin,
-      this.textStyle});
+  const CustomField({
+    Key? key,
+    this.controller,
+    this.padding = const EdgeInsets.symmetric(horizontal: 15),
+    this.hintStyle,
+    this.hintText,
+    this.suffixText,
+    this.margin,
+    this.textStyle,
+    this.contentPadding = const EdgeInsets.symmetric(vertical: 8),
+  }) : super(key: key);
+
   final TextEditingController? controller;
   final EdgeInsets? padding;
   final TextStyle? hintStyle;
@@ -17,6 +20,7 @@ class CustomField extends StatefulWidget {
   final EdgeInsets? margin;
   final String? suffixText;
   final TextStyle? textStyle;
+  final EdgeInsets? contentPadding;
 
   @override
   State<CustomField> createState() => _CustomFieldState();
@@ -28,7 +32,7 @@ class _CustomFieldState extends State<CustomField> {
     return Padding(
       padding: widget.padding!,
       child: Container(
-        padding: widget.margin,
+        margin: widget.contentPadding,
         child: TextField(
           decoration: InputDecoration(
             hintText: widget.hintText ?? "+7",
@@ -37,6 +41,7 @@ class _CustomFieldState extends State<CustomField> {
                       color: Theme.of(context).hintColor,
                     ),
             suffixText: widget.suffixText,
+            contentPadding: const EdgeInsets.symmetric(horizontal: 15),
           ),
           controller: widget.controller,
         ),

@@ -34,7 +34,7 @@ class _AuthPageState extends State<AuthPage> {
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height / 10,
+                top: MediaQuery.of(context).size.height / 15,
               ),
               child: Row(
                 children: [

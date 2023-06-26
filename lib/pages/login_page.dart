@@ -48,9 +48,9 @@ class _LoginPageState extends State<LoginPage> {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(
+                  padding: EdgeInsets.only(
                     left: 15,
-                    top: 110,
+                    top: MediaQuery.of(context).size.height * 0.1,
                   ),
                   child: Text(
                     "Номер телефона",
