@@ -72,7 +72,7 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
               const SizedBox(
-                height: 30,
+                height: 20,
               ),
               Column(
                 children: [
@@ -82,6 +82,8 @@ class _MainPageState extends State<MainPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CourseCart(
+                          height: MediaQuery.of(context).size.height * 0.3,
+                          width: MediaQuery.of(context).size.width * 0.45,
                           onTap: () {
                             Navigator.pushReplacement(
                               context,
@@ -114,6 +116,8 @@ class _MainPageState extends State<MainPage> {
                               ),
                         ),
                         CourseCart(
+                          height: MediaQuery.of(context).size.height * 0.3,
+                          width: MediaQuery.of(context).size.width * 0.45,
                           onTap: () {},
                           avatarColor: Theme.of(context).cardColor,
                           svgpicture: SvgPicture.asset('assets/card2.svg'),
@@ -147,6 +151,8 @@ class _MainPageState extends State<MainPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CourseCart(
+                          height: MediaQuery.of(context).size.height * 0.3,
+                          width: MediaQuery.of(context).size.width * 0.45,
                           onTap: () {},
                           color: Theme.of(context)
                               .secondaryHeaderColor
@@ -171,6 +177,8 @@ class _MainPageState extends State<MainPage> {
                               ),
                         ),
                         CourseCart(
+                          height: MediaQuery.of(context).size.height * 0.3,
+                          width: MediaQuery.of(context).size.width * 0.45,
                           onTap: () {
                             Navigator.pushReplacement(
                               context,

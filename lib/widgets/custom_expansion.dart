@@ -45,7 +45,7 @@ class _CustomExpansionPanelState extends State<CustomExpansionPanel> {
   Widget build(BuildContext context) {
     return ExpansionPanelList(
       elevation: 1,
-      expandedHeaderPadding: EdgeInsets.zero,
+      expandedHeaderPadding: const EdgeInsets.only(bottom: 10),
       animationDuration: const Duration(milliseconds: 500),
       children: [
         ExpansionPanel(
