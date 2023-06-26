@@ -113,6 +113,7 @@ class _CourseCartState extends State<CourseCart> {
                     child: LinearPercentIndicator(
                       progressColor: Theme.of(context).primaryColor,
                       percent: 0.3,
+                      padding: const EdgeInsets.only(right: 5),
                       lineHeight: 7,
                       barRadius: const Radius.circular(20),
                     ),

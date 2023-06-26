@@ -7,10 +7,12 @@ const cardcolor = Color(0xFFF6AE5A);
 const secondaryheadercolor = Color(0xFFEB8079);
 const focuscolor = Color(0xFFDFE7F7);
 const canvascolor = Color(0xFF327DED);
+const shadowcolor = Color(0xFF6D798C);
 const dividercolor = Color(0xFFCCD3DF);
 ThemeData lightTheme = ThemeData(
   primaryColor: primaryColor,
   canvasColor: canvascolor,
+  shadowColor: shadowcolor,
   dividerColor: dividercolor,
   secondaryHeaderColor: secondaryheadercolor,
   cardColor: cardcolor,

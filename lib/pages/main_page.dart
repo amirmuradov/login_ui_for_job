@@ -82,54 +82,57 @@ class _MainPageState extends State<MainPage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        CourseCart(
-                          height: MediaQuery.of(context).size.height * 0.3,
-                          width: MediaQuery.of(context).size.width * 0.45,
-                          onTap: () {
-                            Navigator.pushReplacement(
-                              context,
-                              CupertinoPageRoute(
-                                builder: (context) {
-                                  return const CoursePage();
-                                },
-                              ),
-                            );
-                          },
-                          svgpicture: SvgPicture.asset('assets/card1.svg'),
-                          text: "Пройти курс",
-                          description:
-                              'Morbi congue massa cquis dignissim acus',
-                          nexticon: SvgPicture.asset(
-                            'assets/arrow_next.svg',
+                        Expanded(
+                          child: CourseCart(
+                            onTap: () {
+                              Navigator.pushReplacement(
+                                context,
+                                CupertinoPageRoute(
+                                  builder: (context) {
+                                    return const CoursePage();
+                                  },
+                                ),
+                              );
+                            },
+                            svgpicture: SvgPicture.asset('assets/card1.svg'),
+                            text: "Пройти курс",
+                            description:
+                                'Morbi congue massa cquis dignissim acus',
+                            nexticon: SvgPicture.asset(
+                              'assets/arrow_next.svg',
+                            ),
+                            descriptionstyle: Theme.of(context)
+                                .textTheme
+                                .bodySmall!
+                                .copyWith(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.grey.shade600.withOpacity(0.9),
+                                ),
                           ),
-                          descriptionstyle: Theme.of(context)
-                              .textTheme
-                              .bodySmall!
-                              .copyWith(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey.shade600.withOpacity(0.9),
-                              ),
                         ),
-                        CourseCart(
-                          height: MediaQuery.of(context).size.height * 0.3,
-                          width: MediaQuery.of(context).size.width * 0.45,
-                          onTap: () {},
-                          avatarColor: Theme.of(context).cardColor,
-                          svgpicture: SvgPicture.asset('assets/card2.svg'),
-                          color: Theme.of(context).cardColor.withOpacity(0.3),
-                          text: "Сертификация",
-                          showprogressindicator: false,
-                          description:
-                              'Morbi congue massa cquis dignissim acus ignissim acus',
-                          descriptionstyle: Theme.of(context)
-                              .textTheme
-                              .bodySmall!
-                              .copyWith(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey.shade600.withOpacity(0.9),
-                              ),
+                        const SizedBox(
+                          width: 15,
+                        ),
+                        Expanded(
+                          child: CourseCart(
+                            onTap: () {},
+                            avatarColor: Theme.of(context).cardColor,
+                            svgpicture: SvgPicture.asset('assets/card2.svg'),
+                            color: Theme.of(context).cardColor.withOpacity(0.3),
+                            text: "Сертификация",
+                            showprogressindicator: false,
+                            description:
+                                'Morbi congue massa cquis dignissim acus ignissim acus',
+                            descriptionstyle: Theme.of(context)
+                                .textTheme
+                                .bodySmall!
+                                .copyWith(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.grey.shade600.withOpacity(0.9),
+                                ),
+                          ),
                         ),
                       ],
                     ),
@@ -142,56 +145,60 @@ class _MainPageState extends State<MainPage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        CourseCart(
-                          height: MediaQuery.of(context).size.height * 0.3,
-                          width: MediaQuery.of(context).size.width * 0.45,
-                          onTap: () {},
-                          color: Theme.of(context)
-                              .secondaryHeaderColor
-                              .withOpacity(0.3),
-                          svgpicture: SvgPicture.asset('assets/card3.svg'),
-                          avatarColor: Theme.of(context).secondaryHeaderColor,
-                          showprogressindicator: false,
-                          text: "Ежедневник",
-                          description:
-                              'Morbi congue massa cquis dignissim acus ignissim acus',
-                          descriptionstyle: Theme.of(context)
-                              .textTheme
-                              .bodySmall!
-                              .copyWith(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey.shade600.withOpacity(0.9),
-                              ),
+                        Expanded(
+                          child: CourseCart(
+                            onTap: () {},
+                            color: Theme.of(context)
+                                .secondaryHeaderColor
+                                .withOpacity(0.3),
+                            svgpicture: SvgPicture.asset('assets/card3.svg'),
+                            avatarColor: Theme.of(context).secondaryHeaderColor,
+                            showprogressindicator: false,
+                            text: "Ежедневник",
+                            description:
+                                'Morbi congue massa cquis dignissim acus ignissim acus',
+                            descriptionstyle: Theme.of(context)
+                                .textTheme
+                                .bodySmall!
+                                .copyWith(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.grey.shade600.withOpacity(0.9),
+                                ),
+                          ),
                         ),
-                        CourseCart(
-                          height: MediaQuery.of(context).size.height * 0.3,
-                          width: MediaQuery.of(context).size.width * 0.45,
-                          onTap: () {
-                            Navigator.pushReplacement(
-                              context,
-                              CupertinoPageRoute(
-                                builder: (context) {
-                                  return const FilialsPage();
-                                },
-                              ),
-                            );
-                          },
-                          avatarColor: Theme.of(context).canvasColor,
-                          svgpicture: SvgPicture.asset('assets/card4.svg'),
-                          color: Theme.of(context).canvasColor.withOpacity(0.3),
-                          showprogressindicator: false,
-                          text: "Филиалы",
-                          description:
-                              'Morbi congue massa cquis dignissim acus',
-                          descriptionstyle: Theme.of(context)
-                              .textTheme
-                              .bodySmall!
-                              .copyWith(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey.shade600.withOpacity(0.9),
-                              ),
+                        const SizedBox(
+                          width: 15,
+                        ),
+                        Expanded(
+                          child: CourseCart(
+                            onTap: () {
+                              Navigator.pushReplacement(
+                                context,
+                                CupertinoPageRoute(
+                                  builder: (context) {
+                                    return const FilialsPage();
+                                  },
+                                ),
+                              );
+                            },
+                            avatarColor: Theme.of(context).canvasColor,
+                            svgpicture: SvgPicture.asset('assets/card4.svg'),
+                            color:
+                                Theme.of(context).canvasColor.withOpacity(0.3),
+                            showprogressindicator: false,
+                            text: "Филиалы",
+                            description:
+                                'Morbi congue massa cquis dignissim acus',
+                            descriptionstyle: Theme.of(context)
+                                .textTheme
+                                .bodySmall!
+                                .copyWith(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.grey.shade600.withOpacity(0.9),
+                                ),
+                          ),
                         ),
                       ],
                     ),

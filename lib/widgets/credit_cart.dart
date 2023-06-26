@@ -5,6 +5,7 @@ class CreditCart extends StatefulWidget {
   const CreditCart({
     super.key,
     this.width = 343,
+    this.amount,
     this.textStyle,
     this.svgpicturerate,
     required this.name,
@@ -19,6 +20,7 @@ class CreditCart extends StatefulWidget {
   final String name;
   final TextStyle? textStyle;
   final Widget? svgpicturerate;
+  final String? amount;
   @override
   State<CreditCart> createState() => _CreditCartState();
 }
@@ -40,42 +42,98 @@ class _CreditCartState extends State<CreditCart> {
           ),
         ],
       ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 15,
-              top: 15,
-            ),
-            child: Row(
-              children: [
-                CircleAvatar(
-                  radius: 19,
-                  child: Text(
-                    "logo",
-                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                          color: Theme.of(context).scaffoldBackgroundColor,
-                          fontSize: 11,
-                          fontWeight: FontWeight.w600,
-                        ),
-                  ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 15,
+                  top: 15,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 15),
-                  child: Text(
-                    widget.name,
-                    style: widget.textStyle ??
-                        Theme.of(context).textTheme.bodySmall!.copyWith(
-                              color: Theme.of(context).hintColor,
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      radius: 19,
+                      backgroundColor: Theme.of(context).primaryColor,
+                      child: Text(
+                        "logo",
+                        style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                              color: Theme.of(context).scaffoldBackgroundColor,
+                              fontSize: 11,
+                              fontFamily: "OpenSans",
                               fontWeight: FontWeight.w600,
-                              fontSize: 14,
                             ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          widget.name,
+                          style: widget.textStyle ??
+                              Theme.of(context).textTheme.bodySmall!.copyWith(
+                                    color: Theme.of(context).hintColor,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 14,
+                                    fontFamily: "OpenSans",
+                                  ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: MediaQuery.of(context).size.width * 0.2,
+                          ),
+                          child: widget.svgpicturerate ??
+                              SvgPicture.asset('assets/rating.svg'),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: FractionallySizedBox(
+                    alignment: Alignment.centerLeft,
+                    widthFactor:
+                        0.8, // Процент от ширины экрана, который занимает текст
+                    child: Text(
+                      "Сумма до............................................................",
+                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                            fontSize: 14,
+                            fontFamily: "Gilroy",
+                            color: Theme.of(context).shadowColor,
+                            fontWeight: FontWeight.w400,
+                          ),
+                    ),
                   ),
                 ),
-                widget.svgpicturerate ?? SvgPicture.asset('assets/rating.svg')
-              ],
-            ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  right: 15,
+                ),
+                child: Text(
+                  widget.amount ?? "15000",
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                        fontFamily: "Gilroy",
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                ),
+              )
+            ],
           ),
         ],
       ),

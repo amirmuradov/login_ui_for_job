@@ -153,6 +153,7 @@ class _LoginPageState extends State<LoginPage> {
                       fontWeight: FontWeight.w600,
                       fontFamily: "Gilroy-Regular",
                       decoration: TextDecoration.underline,
+                      decorationColor: Theme.of(context).hintColor,
                     ),
               ),
             ),

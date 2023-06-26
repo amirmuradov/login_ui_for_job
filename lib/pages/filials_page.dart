@@ -171,10 +171,11 @@ class _FilialsPageState extends State<FilialsPage> {
                     ),
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 25, right: 15),
+                        padding: const EdgeInsets.only(left: 35, right: 15),
                         child: Container(
-                          padding: const EdgeInsets.only(left: 30),
-                          width: 120,
+                          padding: const EdgeInsets.only(
+                            left: 25,
+                          ),
                           height: 45,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(66),
@@ -215,7 +216,7 @@ class _FilialsPageState extends State<FilialsPage> {
                       child: Padding(
                         padding: EdgeInsets.symmetric(horizontal: 15),
                         child: CreditCart(
-                          name: "Credit cart",
+                          name: "Credit cart 14",
                         ),
                       ),
                     ),
