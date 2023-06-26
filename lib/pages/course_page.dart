@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:login_ui_for_job/pages/main_page.dart';
-import 'package:login_ui_for_job/pages/test.dart';
+import 'package:login_ui_for_job/widgets/custom_expansion.dart';
 import 'package:login_ui_for_job/widgets/custom_button.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
@@ -166,6 +166,7 @@ class _CoursePageState extends State<CoursePage> {
                         ),
                         Expanded(
                           child: CustomBtn(
+                            padding: const EdgeInsets.all(0),
                             onTap: () {},
                             accentColor:
                                 Theme.of(context).primaryColor.withOpacity(0.1),
