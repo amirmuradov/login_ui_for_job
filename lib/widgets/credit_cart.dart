@@ -130,6 +130,74 @@ class _CreditCartState extends State<CreditCart> {
               ),
             ],
           ),
+          const SizedBox(
+            height: 15,
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: Text(
+                    "Ставка",
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                          fontSize: 14,
+                          fontFamily: "Gilroy-Regular",
+                          color: Theme.of(context).shadowColor,
+                          fontWeight: FontWeight.w400,
+                        ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  right: 15,
+                ),
+                child: Text(
+                  widget.amount ?? "15000",
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                        fontFamily: "Gilroy-Regular",
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: Text(
+                    "Срок",
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                          fontSize: 14,
+                          fontFamily: "Gilroy-Regular",
+                          color: Theme.of(context).shadowColor,
+                          fontWeight: FontWeight.w400,
+                        ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  right: 15,
+                ),
+                child: Text(
+                  widget.amount ?? "15000",
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                        fontFamily: "Gilroy-Regular",
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );

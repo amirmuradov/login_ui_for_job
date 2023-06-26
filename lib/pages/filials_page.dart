@@ -221,7 +221,7 @@ class _FilialsPageState extends State<FilialsPage> {
                       ),
                     ),
                   ],
-                )
+                ),
               ],
             ),
           ),
