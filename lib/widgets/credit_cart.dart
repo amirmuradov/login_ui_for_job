@@ -104,19 +104,14 @@ class _CreditCartState extends State<CreditCart> {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15),
-                  child: FractionallySizedBox(
-                    alignment: Alignment.centerLeft,
-                    widthFactor:
-                        0.8, // Процент от ширины экрана, который занимает текст
-                    child: Text(
-                      "Сумма до............................................................",
-                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                            fontSize: 14,
-                            fontFamily: "Gilroy",
-                            color: Theme.of(context).shadowColor,
-                            fontWeight: FontWeight.w400,
-                          ),
-                    ),
+                  child: Text(
+                    "Сумма до",
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                          fontSize: 14,
+                          fontFamily: "Gilroy-Regular",
+                          color: Theme.of(context).shadowColor,
+                          fontWeight: FontWeight.w400,
+                        ),
                   ),
                 ),
               ),
@@ -127,12 +122,12 @@ class _CreditCartState extends State<CreditCart> {
                 child: Text(
                   widget.amount ?? "15000",
                   style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                        fontFamily: "Gilroy",
+                        fontFamily: "Gilroy-Regular",
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
                       ),
                 ),
-              )
+              ),
             ],
           ),
         ],
