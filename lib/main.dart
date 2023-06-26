@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:login_ui_for_job/pages/auth_page.dart';
 import 'package:login_ui_for_job/theme.dart';
+import 'pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class _MyAppState extends State<MyApp> {
       theme: lightTheme,
       themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
-      home: const AuthPage(),
+      home: const LoginPage(),
     );
   }
 }
