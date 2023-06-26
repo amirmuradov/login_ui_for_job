@@ -74,7 +74,7 @@ class _FilialsPageState extends State<FilialsPage> {
                     children: [
                       Container(
                         padding: EdgeInsets.only(
-                          top: 15,
+                          top: 25,
                           left: 15,
                           right: MediaQuery.of(context).size.width * 0.49,
                         ),
@@ -108,26 +108,31 @@ class _FilialsPageState extends State<FilialsPage> {
                             const SizedBox(
                               height: 15,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 25),
-                              child: CustomBtn(
-                                onTap: () {},
-                                padding: const EdgeInsets.all(0),
-                                text: "Отправить",
-                                textStyle: Theme.of(context)
-                                    .textTheme
-                                    .bodySmall!
-                                    .copyWith(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w600,
-                                      fontFamily: "Gilroy-Regular",
-                                      color: Theme.of(context).primaryColor,
-                                    ),
-                                textColor: Theme.of(context).primaryColor,
-                                accentColor:
-                                    Theme.of(context).scaffoldBackgroundColor,
-                                height: 40,
-                                width: 100,
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                  right: 25,
+                                  bottom: 15,
+                                ),
+                                child: CustomBtn(
+                                  onTap: () {},
+                                  padding: const EdgeInsets.all(0),
+                                  text: "Отправить",
+                                  textStyle: Theme.of(context)
+                                      .textTheme
+                                      .bodySmall!
+                                      .copyWith(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w600,
+                                        fontFamily: "Gilroy-Regular",
+                                        color: Theme.of(context).primaryColor,
+                                      ),
+                                  textColor: Theme.of(context).primaryColor,
+                                  accentColor:
+                                      Theme.of(context).scaffoldBackgroundColor,
+                                  height: 40,
+                                  width: 100,
+                                ),
                               ),
                             ),
                           ],
