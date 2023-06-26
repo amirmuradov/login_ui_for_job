@@ -35,7 +35,7 @@ class _MainPageState extends State<MainPage> {
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                             fontWeight: FontWeight.w600,
                             fontSize: 20,
-                            fontFamily: "Gilroy",
+                            fontFamily: "Gilroy-Regular",
                           ),
                     ),
                     const Icon(

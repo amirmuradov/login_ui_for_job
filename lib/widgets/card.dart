@@ -49,7 +49,7 @@ class _CartState extends State<Cart> {
                 style: Theme.of(context).textTheme.bodySmall!.copyWith(
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
-                      fontFamily: "Gilroy",
+                      fontFamily: "Gilroy-Regular",
                     ),
               ),
             ),
