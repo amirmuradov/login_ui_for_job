@@ -95,16 +95,31 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(
-                top: 15,
-              ),
-              child: CustomField(
-                hintText: "******",
-                hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                      fontFamily: "Gilroy-Regular",
+              padding: const EdgeInsets.only(top: 15),
+              child: Stack(
+                alignment: Alignment.centerRight,
+                children: [
+                  CustomField(
+                    hintText: "******",
+                    hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: "Gilroy-Regular",
+                        ),
+                  ),
+                  Positioned(
+                    right: 25,
+                    child: Text(
+                      "Забыли?",
+                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                            fontSize: 14,
+                            fontFamily: "Gilroy-Regular",
+                            fontWeight: FontWeight.w600,
+                            color: Theme.of(context).primaryColor,
+                          ),
                     ),
+                  ),
+                ],
               ),
             ),
             const SizedBox(
