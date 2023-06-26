@@ -217,6 +217,45 @@ class _FilialsPageState extends State<FilialsPage> {
                         padding: EdgeInsets.symmetric(horizontal: 15),
                         child: CreditCart(
                           name: "Credit cart 14",
+                          amount: '15000',
+                          rate: "0%",
+                          deadline: "от 7 до 30 дней",
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Row(
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 15),
+                        child: CreditCart(
+                          name: "Credit cart 14",
+                          amount: '15000',
+                          rate: "0%",
+                          deadline: "от 7 до 30 дней",
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Row(
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 15),
+                        child: CreditCart(
+                          name: "Credit cart 14",
+                          amount: '15000',
+                          rate: "0%",
+                          deadline: "от 7 до 30 дней",
                         ),
                       ),
                     ),

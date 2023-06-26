@@ -252,6 +252,154 @@ class _CoursePageState extends State<CoursePage> {
                     left: 20,
                   ),
                 ),
+                const SizedBox(
+                  height: 20,
+                ),
+                CustomExpansionPanel(
+                  sessionTexts: const [
+                    "Сессия 5",
+                    "Сессия 6",
+                    "Сессия 7",
+                    "Сессия 8",
+                  ],
+                  decorationboxtext: "Сессия",
+                  decorationboxstyle:
+                      Theme.of(context).textTheme.bodySmall!.copyWith(
+                            fontFamily: "Gilroy-Regular",
+                          ),
+                  checkbox: SvgPicture.asset('assets/checkbox.svg'),
+                  text: "Модуль №2",
+                  decorationboxdescription: "14мин",
+                  decorationboxtextstyle:
+                      Theme.of(context).textTheme.bodySmall!.copyWith(
+                            fontFamily: "Gilroy-Regular",
+                          ),
+                  descriptioncheckbox: SvgPicture.asset(
+                    'assets/checkbox.svg',
+                  ),
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  textStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: Theme.of(context).hintColor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: "Gilroy-Regular",
+                      ),
+                  padding: const EdgeInsets.only(
+                    top: 10,
+                    left: 20,
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                CustomExpansionPanel(
+                  sessionTexts: const [
+                    "Сессия 9",
+                    "Сессия 10",
+                    "Сессия 11",
+                    "Сессия 12",
+                  ],
+                  decorationboxtext: "Сессия",
+                  decorationboxstyle:
+                      Theme.of(context).textTheme.bodySmall!.copyWith(
+                            fontFamily: "Gilroy-Regular",
+                          ),
+                  checkbox: SvgPicture.asset('assets/checkbox.svg'),
+                  text: "Модуль №3",
+                  decorationboxdescription: "14мин",
+                  decorationboxtextstyle:
+                      Theme.of(context).textTheme.bodySmall!.copyWith(
+                            fontFamily: "Gilroy-Regular",
+                          ),
+                  descriptioncheckbox: SvgPicture.asset(
+                    'assets/checkbox.svg',
+                  ),
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  textStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: Theme.of(context).hintColor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: "Gilroy-Regular",
+                      ),
+                  padding: const EdgeInsets.only(
+                    top: 10,
+                    left: 20,
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                CustomExpansionPanel(
+                  sessionTexts: const [
+                    "Сессия 13",
+                    "Сессия 14",
+                    "Сессия 15",
+                    "Сессия 16",
+                  ],
+                  decorationboxtext: "Сессия",
+                  decorationboxstyle:
+                      Theme.of(context).textTheme.bodySmall!.copyWith(
+                            fontFamily: "Gilroy-Regular",
+                          ),
+                  checkbox: SvgPicture.asset('assets/checkbox.svg'),
+                  text: "Модуль №4",
+                  decorationboxdescription: "14мин",
+                  decorationboxtextstyle:
+                      Theme.of(context).textTheme.bodySmall!.copyWith(
+                            fontFamily: "Gilroy-Regular",
+                          ),
+                  descriptioncheckbox: SvgPicture.asset(
+                    'assets/checkbox.svg',
+                  ),
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  textStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: Theme.of(context).hintColor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: "Gilroy-Regular",
+                      ),
+                  padding: const EdgeInsets.only(
+                    top: 10,
+                    left: 20,
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                CustomExpansionPanel(
+                  sessionTexts: const [
+                    "Сессия 17",
+                    "Сессия 18",
+                    "Сессия 19",
+                    "Сессия 20",
+                  ],
+                  decorationboxtext: "Сессия",
+                  decorationboxstyle:
+                      Theme.of(context).textTheme.bodySmall!.copyWith(
+                            fontFamily: "Gilroy-Regular",
+                          ),
+                  checkbox: SvgPicture.asset('assets/checkbox.svg'),
+                  text: "Модуль №5",
+                  decorationboxdescription: "14мин",
+                  decorationboxtextstyle:
+                      Theme.of(context).textTheme.bodySmall!.copyWith(
+                            fontFamily: "Gilroy-Regular",
+                          ),
+                  descriptioncheckbox: SvgPicture.asset(
+                    'assets/checkbox.svg',
+                  ),
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  textStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: Theme.of(context).hintColor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: "Gilroy-Regular",
+                      ),
+                  padding: const EdgeInsets.only(
+                    top: 10,
+                    left: 20,
+                  ),
+                ),
               ],
             ),
           ),

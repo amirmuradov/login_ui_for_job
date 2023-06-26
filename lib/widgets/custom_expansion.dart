@@ -45,6 +45,7 @@ class _CustomExpansionPanelState extends State<CustomExpansionPanel> {
   Widget build(BuildContext context) {
     return ExpansionPanelList(
       elevation: 1,
+      dividerColor: Theme.of(context).dividerColor,
       expandedHeaderPadding: const EdgeInsets.only(bottom: 10),
       animationDuration: const Duration(milliseconds: 500),
       children: [
@@ -69,72 +70,81 @@ class _CustomExpansionPanelState extends State<CustomExpansionPanel> {
           },
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: List.generate(widget.sessionTexts.length, (index) {
-              return Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15),
-                    child: Container(
-                      height: widget.decorationboxheight ?? 42,
-                      decoration: BoxDecoration(
-                        color: widget.decorationboxcolor ??
-                            Theme.of(context).scaffoldBackgroundColor,
-                        borderRadius:
-                            widget.borderRadius ?? BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.shade400.withOpacity(0.7),
-                            spreadRadius: 0,
-                            blurRadius: 5,
-                            offset: const Offset(0, 1),
-                          ),
-                        ],
-                      ),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 5),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Expanded(
-                            child: Row(
-                              children: [
-                                Text(
-                                  widget.sessionTexts[index],
-                                  style: widget.decorationboxstyle ??
-                                      Theme.of(context)
-                                          .textTheme
-                                          .bodySmall!
-                                          .copyWith(
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.w400,
-                                          ),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                widget.descriptioncheckbox ?? const SizedBox(),
-                              ],
+            children: List.generate(
+              widget.sessionTexts.length,
+              (index) {
+                return Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Container(
+                        height: widget.decorationboxheight ?? 42,
+                        decoration: BoxDecoration(
+                          color: widget.decorationboxcolor ??
+                              Theme.of(context).scaffoldBackgroundColor,
+                          borderRadius:
+                              widget.borderRadius ?? BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.shade400.withOpacity(0.7),
+                              spreadRadius: 0,
+                              blurRadius: 5,
+                              offset: const Offset(0, 1),
                             ),
-                          ),
-                          Text(
-                            widget.decorationboxdescription,
-                            style: widget.decorationboxtextstyle ??
-                                Theme.of(context).textTheme.bodySmall!.copyWith(
-                                      fontSize: 16,
-                                      color:
-                                          Colors.grey.shade600.withOpacity(0.9),
-                                    ),
-                          ),
-                        ],
+                          ],
+                        ),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 5,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Expanded(
+                              child: Row(
+                                children: [
+                                  Text(
+                                    widget.sessionTexts[index],
+                                    style: widget.decorationboxstyle ??
+                                        Theme.of(context)
+                                            .textTheme
+                                            .bodySmall!
+                                            .copyWith(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.w400,
+                                            ),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  widget.descriptioncheckbox ??
+                                      const SizedBox(),
+                                ],
+                              ),
+                            ),
+                            Text(
+                              widget.decorationboxdescription,
+                              style: widget.decorationboxtextstyle ??
+                                  Theme.of(context)
+                                      .textTheme
+                                      .bodySmall!
+                                      .copyWith(
+                                        fontSize: 16,
+                                        color: Colors.grey.shade600
+                                            .withOpacity(0.9),
+                                      ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                ],
-              );
-            }),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                  ],
+                );
+              },
+            ),
           ),
           isExpanded: _isExpanded,
           canTapOnHeader: true,

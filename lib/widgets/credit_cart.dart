@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:login_ui_for_job/widgets/custom_button.dart';
 
 class CreditCart extends StatefulWidget {
   const CreditCart({
     super.key,
     this.width = 343,
-    this.amount,
+    required this.amount,
+    required this.deadline,
+    required this.rate,
     this.textStyle,
     this.svgpicturerate,
     required this.name,
@@ -20,7 +23,10 @@ class CreditCart extends StatefulWidget {
   final String name;
   final TextStyle? textStyle;
   final Widget? svgpicturerate;
-  final String? amount;
+  final String amount;
+  final String rate;
+  final String deadline;
+
   @override
   State<CreditCart> createState() => _CreditCartState();
 }
@@ -29,6 +35,7 @@ class _CreditCartState extends State<CreditCart> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.only(bottom: 10),
       height: widget.height,
       width: widget.width,
       decoration: BoxDecoration(
@@ -50,7 +57,7 @@ class _CreditCartState extends State<CreditCart> {
               Padding(
                 padding: const EdgeInsets.only(
                   left: 15,
-                  top: 15,
+                  top: 10,
                 ),
                 child: Row(
                   children: [
@@ -97,7 +104,7 @@ class _CreditCartState extends State<CreditCart> {
             ],
           ),
           const SizedBox(
-            height: 15,
+            height: 10,
           ),
           Row(
             children: [
@@ -120,7 +127,7 @@ class _CreditCartState extends State<CreditCart> {
                   right: 15,
                 ),
                 child: Text(
-                  widget.amount ?? "15000",
+                  widget.amount,
                   style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         fontFamily: "Gilroy-Regular",
                         fontSize: 16,
@@ -131,7 +138,7 @@ class _CreditCartState extends State<CreditCart> {
             ],
           ),
           const SizedBox(
-            height: 15,
+            height: 10,
           ),
           Row(
             children: [
@@ -154,7 +161,7 @@ class _CreditCartState extends State<CreditCart> {
                   right: 15,
                 ),
                 child: Text(
-                  widget.amount ?? "15000",
+                  widget.rate,
                   style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         fontFamily: "Gilroy-Regular",
                         fontSize: 16,
@@ -165,7 +172,7 @@ class _CreditCartState extends State<CreditCart> {
             ],
           ),
           const SizedBox(
-            height: 15,
+            height: 10,
           ),
           Row(
             children: [
@@ -188,7 +195,7 @@ class _CreditCartState extends State<CreditCart> {
                   right: 15,
                 ),
                 child: Text(
-                  widget.amount ?? "15000",
+                  widget.deadline,
                   style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         fontFamily: "Gilroy-Regular",
                         fontSize: 16,
@@ -197,6 +204,26 @@ class _CreditCartState extends State<CreditCart> {
                 ),
               ),
             ],
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: CustomBtn(
+                padding: const EdgeInsets.all(0),
+                onTap: () {},
+                accentColor: Theme.of(context).primaryColor.withOpacity(0.1),
+                text: "Отправить заявку",
+                textStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      fontFamily: "Gilroy-Regular",
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      color: Theme.of(context).primaryColor,
+                    ),
+              ),
+            ),
           ),
         ],
       ),
