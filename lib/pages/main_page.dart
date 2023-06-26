@@ -7,7 +7,7 @@ import 'package:login_ui_for_job/widgets/card.dart';
 import 'package:login_ui_for_job/widgets/course_cart.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+  const MainPage({Key? key}) : super(key: key);
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -45,10 +45,8 @@ class _MainPageState extends State<MainPage> {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 30,
-              ),
-              Container(
+              const SizedBox(height: 30),
+              SizedBox(
                 height: 120,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
@@ -72,9 +70,7 @@ class _MainPageState extends State<MainPage> {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              const SizedBox(height: 20),
               Column(
                 children: [
                   Padding(
@@ -111,9 +107,7 @@ class _MainPageState extends State<MainPage> {
                                 ),
                           ),
                         ),
-                        const SizedBox(
-                          width: 15,
-                        ),
+                        const SizedBox(width: 15),
                         Expanded(
                           child: CourseCart(
                             onTap: () {},
@@ -137,9 +131,7 @@ class _MainPageState extends State<MainPage> {
                       ],
                     ),
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  const SizedBox(height: 20),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Row(
@@ -167,9 +159,7 @@ class _MainPageState extends State<MainPage> {
                                 ),
                           ),
                         ),
-                        const SizedBox(
-                          width: 15,
-                        ),
+                        const SizedBox(width: 15),
                         Expanded(
                           child: CourseCart(
                             onTap: () {
