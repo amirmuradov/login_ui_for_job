@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:login_ui_for_job/pages/course_page.dart';
 import 'package:login_ui_for_job/pages/filials_page.dart';
-import 'package:login_ui_for_job/widgets/card.dart';
 import 'package:login_ui_for_job/widgets/course_cart.dart';
+
+import '../widgets/cart.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
