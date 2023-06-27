@@ -18,15 +18,21 @@ class _OnboardingState extends State<Onboarding> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            "Поздравляем, вы начали обучение!",
-            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  color: Theme.of(context).hintColor,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 20,
-                  fontFamily: "Gilroy-Bold",
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  "Поздравляем, вы начали обучение!",
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: Theme.of(context).hintColor,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 20,
+                        fontFamily: "Gilroy-Bold",
+                      ),
+                  textAlign: TextAlign.center,
                 ),
-            textAlign: TextAlign.center,
+              ),
+            ],
           ),
           const SizedBox(
             height: 50,

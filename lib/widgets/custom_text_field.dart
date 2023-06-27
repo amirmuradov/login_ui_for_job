@@ -39,7 +39,7 @@ class _CustomFieldState extends State<CustomField> {
         margin: widget.contentPadding,
         child: TextField(
           decoration: InputDecoration(
-            hintText: widget.hintText ?? "+7",
+            hintText: widget.hintText,
             hintStyle: widget.hintStyle ??
                 Theme.of(context).textTheme.bodySmall!.copyWith(
                       color: Theme.of(context).hintColor,
